@@ -1,6 +1,7 @@
 import { CategorySection } from "@/components/category-section"
 import { FeaturedProducts } from "@/components/featured-products"
-import HeroSection from "@/components/hero-section"
+import { HeroSection } from "@/components/hero-section"
+
 import { Button } from "@/components/ui/button"
 import { ShoppingBag } from "lucide-react"
 import Link from "next/link"
@@ -8,7 +9,7 @@ import Link from "next/link"
 
 export default function Home () {
   return (
-    <div className = "flex flex-col min-h-screen">
+    <div className = "flex flex-col min-h-screen ">
       <header className = "border-b rounded-b-xl shadow-md">
         <div className= "container flex h-16 items-center justify-between px-4 md:px-6">
           <Link href="/" className ="flex item-center gap-2 text-lg font-semibold">
