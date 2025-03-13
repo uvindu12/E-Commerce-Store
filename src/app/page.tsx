@@ -1,6 +1,6 @@
 import { CategorySection } from "@/components/category-section"
 import { FeaturedProducts } from "@/components/featured-products"
-import { HeroSection } from "@/components/hero-section"
+import HeroSection from "@/components/hero-section"
 import { Button } from "@/components/ui/button"
 import { ShoppingBag } from "lucide-react"
 import Link from "next/link"
@@ -30,7 +30,7 @@ export default function Home () {
               </Button>
             </Link>
             <Link href="/admin">
-              <Button className ="bg-blue-600 hover:bg-blue-200 hover:text-blue-900 hover:font-bold">Admin</Button>
+              <Button className ="bg-blue-600 hover:bg-blue-200 hover:text-blue-900 hover:font-bold ">Admin</Button>
             </Link>
           </div>
         </div>
