@@ -27,7 +27,7 @@ export default function Home () {
               </Button>
             </Link>
             <Link href="/admin">
-              <Button className ="bg-blue-600">Admin</Button>
+              <Button className ="bg-blue-600 hover:bg-blue-200 hover:text-blue-900 hover:font-bold">Admin</Button>
             </Link>
           </div>
         </div>
