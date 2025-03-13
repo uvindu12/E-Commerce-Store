@@ -88,7 +88,7 @@ interface ProductProps {
 
 function ProductCard({ product }: ProductProps) {
   return (
-    <Card className="overflow-hidden transition-all hover:shadow-lg min-w-[250px] max-w-[300px]">
+    <Card className="overflow-hidden transition-all hover:shadow-lg w-[280px] flex-shrink-0">
       <div className="relative">
         <Link href={`/products/${product.id}`}>
           <div className="overflow-hidden aspect-square">
@@ -107,13 +107,13 @@ function ProductCard({ product }: ProductProps) {
           <span className="text-sm font-medium">{product.rating}</span>
         </div>
         <Link href={`/products/${product.id}`}>
-          <h3 className="font-semibold text-lg leading-tight mb-1 hover:underline">{product.name}</h3>
+          <h3 className="font-semibold text-lg leading-tight mb-1 hover:underline text-blue-950">{product.name}</h3>
         </Link>
-        <p className="font-bold">${product.price.toFixed(2)}</p>
+        <p className="font-bold text-blue-950">${product.price.toFixed(2)}</p>
       </CardContent>
       <CardFooter className="p-4 pt-0">
-        <Button className="w-full text-blue-900 bg-blue-300 hover:bg-blue-600 hover:text-blue-50" size="sm">
-          <ShoppingCart className="mr-2 h-4 w-4 " />
+        <Button className="w-full text-blue-900 font-bold bg-blue-300 hover:bg-blue-600 hover:text-blue-50 hover:font-bold" size="sm">
+          <ShoppingCart className="mr-2 h-4 w-4" />
           Add to Cart
         </Button>
       </CardFooter>
@@ -123,19 +123,19 @@ function ProductCard({ product }: ProductProps) {
 
 export function FeaturedProducts() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-20">
+    <section className="w-full py-12 md:py-24 lg:py-10">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Featured Products</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-blue-950">Featured Products</h2>
             <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Discover our most popular items, handpicked for quality and style.
             </p>
           </div>
         </div>
 
-        <div className="mt-12 w-full overflow-hidden">
-          <Marquee  pauseOnHover className="[--duration:20s]">
+        <div className="mt-12 w-full">
+          <Marquee speed="normal" pauseOnHover>
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -144,7 +144,7 @@ export function FeaturedProducts() {
 
         <div className="flex justify-center mt-10">
           <Link href="/products">
-            <Button size="lg" className ="bg-blue-600 hover:bg-blue-300 hover:text-blue-800 hover:font-bold">View All Products</Button>
+            <Button size="lg" className= "bg-blue-600 hover:bg-blue-300 hover:text-blue-800 hover:font-bold">View All Products</Button>
           </Link>
         </div>
       </div>
