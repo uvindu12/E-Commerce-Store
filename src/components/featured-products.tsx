@@ -112,7 +112,7 @@ function ProductCard({ product }: ProductProps) {
         <p className="font-bold text-blue-950">${product.price.toFixed(2)}</p>
       </CardContent>
       <CardFooter className="p-4 pt-0">
-        <Button className="w-full text-blue-900 font-bold bg-blue-300 hover:bg-blue-600 hover:text-blue-50 hover:font-bold" size="sm">
+        <Button className="w-full text-blue-900 font-bold bg-blue-300 hover:bg-blue-600 hover:text-blue-50 hover:font-bold cursor-pointer" size="sm">
           <ShoppingCart className="mr-2 h-4 w-4" />
           Add to Cart
         </Button>
@@ -142,11 +142,7 @@ export function FeaturedProducts() {
           </Marquee>
         </div>
 
-        <div className="flex justify-center mt-10">
-          <Link href="/products">
-            <Button size="lg" className= "bg-blue-600 hover:bg-blue-300 hover:text-blue-800 hover:font-bold">View All Products</Button>
-          </Link>
-        </div>
+        
       </div>
     </section>
   )

@@ -31,13 +31,13 @@ export function HeroSection() {
           </div>
           <div className="mt-8 flex flex-col gap-4 min-[400px]:flex-row">
             <Link href="/products">
-              <Button size="lg" className="px-8 text-base bg-blue-600 hover:bg-blue-300 hover:text-blue-800 hover:font-bold">
+              <Button size="lg" className="cursor-pointer px-8 text-base bg-blue-600 hover:bg-blue-300 hover:text-blue-800 hover:font-bold">
                 Shop Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             <Link href="/categories">
-              <Button size="lg" variant="secondary" className="px-8 text-base text-blue-900 bg-white hover:bg-blue-50 hover:text-blue-900 shadow-blue-300 hover:font-bold">
+              <Button size="lg" variant="secondary" className="px-8 text-base text-blue-900 bg-white hover:bg-blue-50 hover:text-blue-900 shadow-blue-300 hover:font-bold cursor-pointer">
                 Browse Categories
               </Button>
             </Link>
