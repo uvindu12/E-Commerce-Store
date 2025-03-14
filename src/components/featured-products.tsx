@@ -142,7 +142,11 @@ export function FeaturedProducts() {
           </Marquee>
         </div>
 
-        
+        <div className="flex justify-center mt-10">
+          <Link href="/products">
+            <Button size="lg" className= "bg-blue-600 hover:bg-blue-300 hover:text-blue-800 hover:font-bold cursor-pointer">View All Products</Button>
+          </Link>
+        </div>
       </div>
     </section>
   )
