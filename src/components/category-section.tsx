@@ -24,13 +24,13 @@ const categories = [
     count: 86,
   },
   {
-    id: 2,
+    id: 4,
     name: "Footwear",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/casual.jpg-PSC67mLia8I7AeOh8crFZm44KEPtlN.jpeg",
     count: 64,
   },
   {
-    id: 3,
+    id: 5,
     name: "Accessories",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Wallet.jpg-t6Q8u91wiYqwW9Khpsjqx3ob3bi9K8.jpeg",
     count: 86,
@@ -39,7 +39,7 @@ const categories = [
 
 export function CategorySection() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+    <section className="w-full py-12 md:py-24 lg:py-10 bg-muted">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
