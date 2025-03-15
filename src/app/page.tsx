@@ -40,6 +40,7 @@ export default function Home () {
       <main className ="felx-1">
         <HeroSection/>
         <FeaturedProducts/>
+        <CategorySection/>
       </main>
 
       <footer className ="border-t py-6 md:py-8 rounded-2xl shadow-md ">

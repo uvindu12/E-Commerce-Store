@@ -8,19 +8,31 @@ const categories = [
   {
     id: 1,
     name: "Clothing",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/t%20shirt%20.jpg-2tGnD6nltUPBdcIpabVxezfBUmQrld.jpeg",
     count: 120,
   },
   {
     id: 2,
     name: "Footwear",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/shoes.jpg-B6jaICOBWr8yK91qsZFk4mDQ87P6c8.jpeg",
     count: 64,
   },
   {
     id: 3,
     name: "Accessories",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/watch.jpg-91X75zZPUA1UtW76Ms9lsXy9oBzYmc.jpeg",
+    count: 86,
+  },
+  {
+    id: 2,
+    name: "Footwear",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/casual.jpg-PSC67mLia8I7AeOh8crFZm44KEPtlN.jpeg",
+    count: 64,
+  },
+  {
+    id: 3,
+    name: "Accessories",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Wallet.jpg-t6Q8u91wiYqwW9Khpsjqx3ob3bi9K8.jpeg",
     count: 86,
   },
 ]
@@ -37,15 +49,15 @@ export function CategorySection() {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 pt-12">
+        <div className="mx-auto grid max-w-10xl grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-5 pt-12">
           {categories.map((category) => (
             <Link key={category.id} href={`/categories/${category.id}`} className="group">
-              <Card className="overflow-hidden transition-all hover:shadow-lg">
-                <div className="relative h-[200px] w-full overflow-hidden">
+              <Card className="overflow-hidden transition-all hover:shadow-lg p-2">
+                <div className="relative h-[300px] w-full overflow-hidden ">
                   <img
                     src={category.image || "/placeholder.svg"}
                     alt={category.name}
-                    className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform group-hover:scale-105 rounded-2xl"
                   />
                 </div>
                 <CardContent className="p-4">
@@ -65,4 +77,3 @@ export function CategorySection() {
     </section>
   )
 }
-
