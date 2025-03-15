@@ -51,7 +51,8 @@ export function SalesChart() {
             border: "1px solid #e2e8f0",
           }}
         />
-        <Bar dataKey="total" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]}  />
+        <Bar dataKey="total" fill="#5acdff" radius={[4, 4, 0, 0]} />
+
       </BarChart>
     </ResponsiveContainer>
   )
