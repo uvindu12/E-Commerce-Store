@@ -100,7 +100,7 @@ interface ProductProps {
 function ProductCard({ product }: ProductProps) {
   return (
     
-      <Card className="overflow-hidden transition-all hover:shadow-2xl hover:scale-105">
+      <Card className="overflow-hidden transition-all hover:shadow-lg p-3">
       <div className="relative">
         <Link href={`/products/${product.id}`}>
           <div className="overflow-hidden aspect-square rounded-2xl hover:scale-100 transition-transform w-[300px] h-[400px]">
@@ -115,7 +115,7 @@ function ProductCard({ product }: ProductProps) {
       </div>
       <CardContent className="p-4 text-center">
         <Link href={`/products/${product.id}`}>
-          <h3 className="font-semibold text-lg leading-tight mb-1 hover:font-bold hover:text-2xl hover:text-blue-500 text-blue-950">{product.name}</h3>
+          <h3 className="font-semibold text-lg leading-tight mb-1 hover:font-bold  hover:text-blue-500 text-blue-950">{product.name}</h3>
         </Link>
       </CardContent>
     </Card>
