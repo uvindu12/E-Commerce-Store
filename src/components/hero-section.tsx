@@ -21,7 +21,7 @@ export function HeroSection() {
       <div className="container relative px-4 md:px-6">
         <div className="max-w-2xl">
           <div className="space-y-4">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-blue-950">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none ">
               Elevate Your Style Journey
             </h1>
             <p className="max-w-[600px] text-lg text-muted-foreground md:text-xl">
