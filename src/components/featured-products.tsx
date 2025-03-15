@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { ShoppingCart, Star } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -13,65 +12,76 @@ const products = [
     id: 1,
     name: "Premium Cotton T-Shirt",
     price: 29.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/t%20shirt%20.jpg-2tGnD6nltUPBdcIpabVxezfBUmQrld.jpeg",
     category: "Clothing",
     rating: 4.5,
+    description: "Oversized fit premium cotton t-shirt with minimalist design",
   },
   {
     id: 2,
     name: "Slim Fit Jeans",
     price: 59.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Slim%20Fit%20Jeans%20.jpg-2wwKY9YkMFnuRXn7jP0w5pSra7RSjo.jpeg",
     category: "Clothing",
     rating: 4.2,
+    description: "Classic medium-wash slim fit jeans with perfect stretch",
   },
   {
     id: 3,
-    name: "Leather Sneakers",
+    name: "Athletic Sneakers",
     price: 89.99,
-    image: "/placeholder.svg?height=300&width=300",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/shoes.jpg-B6jaICOBWr8yK91qsZFk4mDQ87P6c8.jpeg",
     category: "Footwear",
     rating: 4.8,
+    description: "Lightweight performance sneakers with rose gold accents",
   },
   {
     id: 4,
     name: "Minimalist Watch",
-    price: 129.99,
-    image: "/placeholder.svg?height=300&width=300",
+    price: 199.99,
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/watch.jpg-91X75zZPUA1UtW76Ms9lsXy9oBzYmc.jpeg",
     category: "Accessories",
     rating: 4.6,
+    description: "Elegant chronograph watch with leather strap",
   },
   {
     id: 5,
     name: "Designer Sunglasses",
-    price: 79.99,
-    image: "/placeholder.svg?height=300&width=300",
+    price: 129.99,
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/sunglasses%20.jpg-YA0znMGpMiIN1M3vjY4gzqS3V5FqcH.jpeg",
     category: "Accessories",
     rating: 4.7,
+    description: "Modern square-frame sunglasses with UV protection",
   },
   {
     id: 6,
-    name: "Casual Hoodie",
-    price: 49.99,
-    image: "/placeholder.svg?height=300&width=300",
+    name: "Premium Tracksuit",
+    price: 119.99,
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/casual.jpg-PSC67mLia8I7AeOh8crFZm44KEPtlN.jpeg",
     category: "Clothing",
     rating: 4.3,
+    description: "Two-tone comfortable tracksuit for modern lifestyle",
   },
   {
     id: 7,
-    name: "Running Shoes",
-    price: 119.99,
-    image: "/placeholder.svg?height=300&width=300",
+    name: "Leather Sneakers",
+    price: 149.99,
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/letthershoes.jpg-TR5tdXxpdcmRy9RIHxJCdSv4901Gjr.jpeg",
     category: "Footwear",
     rating: 4.9,
+    description: "Premium leather sneakers with platform sole",
   },
   {
     id: 8,
     name: "Leather Wallet",
-    price: 39.99,
-    image: "/placeholder.svg?height=300&width=300",
+    price: 49.99,
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Wallet.jpg-t6Q8u91wiYqwW9Khpsjqx3ob3bi9K8.jpeg",
     category: "Accessories",
     rating: 4.4,
+    description: "Genuine leather wallet with classic design",
   },
 ]
 
@@ -83,15 +93,16 @@ interface ProductProps {
     image: string
     category: string
     rating: number
+    description: string
   }
 }
 
 function ProductCard({ product }: ProductProps) {
   return (
-    <Card className="overflow-hidden transition-all hover:shadow-lg w-[280px] flex-shrink-0">
+    <Card className="overflow-hidden transition-all hover:shadow-lg w-[300px] flex-shrink-0 bg-blue-50">
       <div className="relative">
         <Link href={`/products/${product.id}`}>
-          <div className="overflow-hidden aspect-square">
+          <div className="overflow-hidden aspect-square rounded-2xl hover:scale-100 transition-transform w-[300px] h-[400px]">
             <img
               src={product.image || "/placeholder.svg"}
               alt={product.name}
@@ -99,24 +110,13 @@ function ProductCard({ product }: ProductProps) {
             />
           </div>
         </Link>
-        <Badge className="absolute top-2 right-2">{product.category}</Badge>
+        <Badge className="absolute top-2 right-2 justify-center ">{product.category}</Badge>
       </div>
-      <CardContent className="p-4">
-        <div className="flex items-center gap-2 mb-2">
-          <Star className="w-4 h-4 fill-primary text-primary" />
-          <span className="text-sm font-medium">{product.rating}</span>
-        </div>
+      <CardContent className="p-4 text-center">
         <Link href={`/products/${product.id}`}>
           <h3 className="font-semibold text-lg leading-tight mb-1 hover:underline text-blue-950">{product.name}</h3>
         </Link>
-        <p className="font-bold text-blue-950">${product.price.toFixed(2)}</p>
       </CardContent>
-      <CardFooter className="p-4 pt-0">
-        <Button className="w-full text-blue-900 font-bold bg-blue-300 hover:bg-blue-600 hover:text-blue-50 hover:font-bold cursor-pointer" size="sm">
-          <ShoppingCart className="mr-2 h-4 w-4" />
-          Add to Cart
-        </Button>
-      </CardFooter>
     </Card>
   )
 }
