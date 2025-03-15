@@ -99,7 +99,8 @@ interface ProductProps {
 
 function ProductCard({ product }: ProductProps) {
   return (
-    <Card className="overflow-hidden transition-all hover:shadow-lg w-[300px] flex-shrink-0 bg-blue-50">
+    
+      <Card className="overflow-hidden transition-all hover:shadow-2xl hover:scale-105">
       <div className="relative">
         <Link href={`/products/${product.id}`}>
           <div className="overflow-hidden aspect-square rounded-2xl hover:scale-100 transition-transform w-[300px] h-[400px]">
@@ -110,14 +111,15 @@ function ProductCard({ product }: ProductProps) {
             />
           </div>
         </Link>
-        <Badge className="absolute top-2 right-2 justify-center ">{product.category}</Badge>
+        <Badge className="absolute top-2 right-2 justify-center bg-blue-600 ">{product.category}</Badge>
       </div>
       <CardContent className="p-4 text-center">
         <Link href={`/products/${product.id}`}>
-          <h3 className="font-semibold text-lg leading-tight mb-1 hover:underline text-blue-950">{product.name}</h3>
+          <h3 className="font-semibold text-lg leading-tight mb-1 hover:font-bold hover:text-2xl hover:text-blue-500 text-blue-950">{product.name}</h3>
         </Link>
       </CardContent>
     </Card>
+  
   )
 }
 
@@ -134,7 +136,7 @@ export function FeaturedProducts() {
           </div>
         </div>
 
-        <div className="mt-12 w-full">
+        <div className="mt-12 w-full h-full p-1 ">
           <Marquee speed="normal" pauseOnHover>
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
